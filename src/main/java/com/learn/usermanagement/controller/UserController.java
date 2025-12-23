@@ -25,12 +25,12 @@ public class UserController {
 	}
 
 	// ✅ Existing POST (UNCHANGED)
+
 	@PostMapping
 	public User createUser(@RequestBody User user) {
 		return userService.save(user);
 	}
 
-	// ✅ Existing GET (UNCHANGED)
 	@GetMapping
 	public List<User> getAllUsers() {
 		return userService.getAll();

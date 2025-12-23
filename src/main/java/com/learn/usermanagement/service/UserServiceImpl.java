@@ -14,13 +14,13 @@ public class UserServiceImpl implements UserService {
 	@Autowired
 	private UserRepository repository;
 
-	// ✅ EXISTING METHOD
 	@Override
 	public User save(User user) {
 		return repository.save(user);
 	}
 
 	// ✅ ADD: GET ALL
+
 	@Override
 	public List<User> getAll() {
 		return repository.findAll();
@@ -44,4 +44,5 @@ public class UserServiceImpl implements UserService {
 	public void delete(Long id) {
 		repository.deleteById(id);
 	}
+
 }
